@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Relaxifyy">
-
+        <activity
+            android:name=".HomePageActivity"
+            android:exported="false" />
         <activity
             android:name=".Consult"
             android:exported="false" />
-
         <activity
             android:name=".DepressionActivity"
             android:exported="false" />
@@ -28,7 +29,6 @@
         <activity
             android:name=".OptionActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

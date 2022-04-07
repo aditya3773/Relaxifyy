@@ -63,7 +63,9 @@ class MainActivity : AppCompatActivity() {
             val account = completedTask.getResult(ApiException::class.java)
 
             // Signed in successfully, show authenticated UI.
-            //updateUI(account)
+            val intent = Intent(this,HomePageActivity::class.java)
+            startActivity(intent)
+            finish()
         } catch (e: ApiException) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
