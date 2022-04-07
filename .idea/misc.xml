@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
         <entry key="app/src/main/res/drawable/normaal_option.xml" value="0.1575" />
         <entry key="app/src/main/res/drawable/selected_option.xml" value="0.1575" />
@@ -10,6 +11,7 @@
         <entry key="app/src/main/res/layout/activity_anxiety.xml" value="0.16979166666666667" />
         <entry key="app/src/main/res/layout/activity_bipolar.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_depression.xml" value="0.29583333333333334" />
+
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.32140655517578137" />
         <entry key="app/src/main/res/layout/activity_option.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_question.xml" value="0.3098958333333333" />
