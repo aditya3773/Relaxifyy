@@ -10,7 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Relaxifyy">
         <activity
+
             android:name=".Consult"
+
+            android:name=".DepressionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BipolarActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bipolar"
+            android:theme="@style/Theme.Relaxifyy.NoActionBar" />
+        <activity
+            android:name=".OptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity"
+
             android:exported="false" />
         <activity
             android:name=".MainActivity"
