@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/call.xml" value="0.153" />
+        <entry key="app/src/main/res/drawable/dp.xml" value="0.153" />
+        <entry key="app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.153" />
         <entry key="app/src/main/res/drawable/signbutton.xml" value="0.135650634765625" />
+        <entry key="app/src/main/res/layout/activity_anxiety.xml" value="0.2617753623188406" />
+        <entry key="app/src/main/res/layout/activity_consult.xml" value="0.281072998046875" />
+        <entry key="app/src/main/res/layout/activity_depression.xml" value="0.2617753623188406" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.32140655517578137" />
+        <entry key="app/src/main/res/layout/activity_option.xml" value="0.2617753623188406" />
       </map>
     </option>
   </component>
