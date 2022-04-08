@@ -21,7 +21,7 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
     var selectedOption : Int? = null
     var questionList : ArrayList<depression_dc>? = null
     var currentPosition : Int =1
-    val buttonNext : Button = findViewById(R.id.buttonNext)
+    var buttonNext : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +31,13 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
         option2 = findViewById(R.id.option2)
         option3 = findViewById(R.id.option3)
         option4 = findViewById(R.id.option4)
+        buttonNext=findViewById(R.id.buttonNext)
 
         option1?.setOnClickListener(this)
         option2?.setOnClickListener(this)
         option3?.setOnClickListener(this)
         option4?.setOnClickListener(this)
+        buttonNext?.setOnClickListener(this)
 
 
 
@@ -52,13 +54,14 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
         option3?.text= particularQuestion.option3
         option4?.text= particularQuestion.option4
 
+        buttonNext?.text="SUBMIT"
+
     }
 
     fun selectedOptionView(tv:TextView,selectedOptionNo:Int){
 
         defaultOptionView()
         selectedOption = selectedOptionNo
-        tv.setTextColor(Color.parseColor("#7F9A8B"))
         tv.background= ContextCompat.getDrawable(this,R.drawable.selected_option)
     }
 
@@ -80,8 +83,6 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
         }
 
         for (option in options) {
-            option.setTextColor(Color.parseColor("#457B9D"))
-            option.typeface= Typeface.DEFAULT
             option.background= ContextCompat.getDrawable(this, R.drawable.normaal_option)
         }
 
@@ -115,7 +116,7 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
 
                 if(selectedOption==0){
                     currentPosition++
-                    when{currentPosition <= questionList!!.size -> {
+                    when{currentPosition <= 10 -> {
                         getQues()
                     }
                         else -> {
@@ -130,7 +131,7 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
 
                     val question = questionList?.get(currentPosition - 1)
 
-                    if (currentPosition == questionList!!.size) {
+                    if (currentPosition == 10) {
                         buttonNext?.text= "FINISH"
                     } else {
                         buttonNext?.text= "GO TO NEXT QUESTION"

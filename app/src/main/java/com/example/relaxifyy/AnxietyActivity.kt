@@ -19,25 +19,27 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
     var option3 : TextView? = null
     var option4 : TextView? = null
     var selectedOption : Int? = null
-    var questionList : ArrayList<anxiety>? = null
+
+    var questionList : ArrayList<anxietyClass>? = null
     var currentPosition : Int =1
-    val buttonNext : Button = findViewById(R.id.buttonNext)
+    var buttonNext : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bipolar)
+
         question = findViewById(R.id.question)
         option1 = findViewById(R.id.option1)
         option2 = findViewById(R.id.option2)
         option3 = findViewById(R.id.option3)
         option4 = findViewById(R.id.option4)
+        buttonNext=findViewById(R.id.buttonNext)
 
         option1?.setOnClickListener(this)
         option2?.setOnClickListener(this)
         option3?.setOnClickListener(this)
         option4?.setOnClickListener(this)
-
-
+        buttonNext?.setOnClickListener(this)
 
 
         questionList = Anxiety.getQuestions()
@@ -45,20 +47,20 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
         getQues()
     }
     fun getQues(){
-        val particularQuestion: anxiety = questionList!!.get(currentPosition-1)
+        val particularQuestion: anxietyClass = questionList!!.get(currentPosition-1)
         question?.text= particularQuestion.question
         option1?.text= particularQuestion.option1
         option2?.text= particularQuestion.option2
         option3?.text= particularQuestion.option3
         option4?.text= particularQuestion.option4
 
+        buttonNext?.text="SUBMIT"
+
     }
 
     fun selectedOptionView(tv:TextView,selectedOptionNo:Int){
 
         defaultOptionView()
-        selectedOption = selectedOptionNo
-        tv.setTextColor(Color.parseColor("#7F9A8B"))
         tv.background= ContextCompat.getDrawable(this,R.drawable.selected_option)
     }
 
@@ -80,8 +82,6 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
         }
 
         for (option in options) {
-            option.setTextColor(Color.parseColor("#457B9D"))
-            option.typeface= Typeface.DEFAULT
             option.background= ContextCompat.getDrawable(this, R.drawable.normaal_option)
         }
 
@@ -120,7 +120,6 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
                     }
                         else -> {
                             val intent = Intent(this,Result::class.java)
-
                             startActivity(intent)
                             finish()
                         }
@@ -138,7 +137,6 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
 
                     selectedOption = 0
                 }
-
 
             }
         }

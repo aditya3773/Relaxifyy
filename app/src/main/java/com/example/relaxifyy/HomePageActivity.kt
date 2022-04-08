@@ -17,5 +17,10 @@ class HomePageActivity : AppCompatActivity()  {
             val intent = Intent(this,OptionActivity::class.java)
             startActivity(intent)
         }
+
+        btnConsult.setOnClickListener{
+            val intent = Intent(this,Consult::class.java)
+            startActivity(intent)
+        }
     }
 }

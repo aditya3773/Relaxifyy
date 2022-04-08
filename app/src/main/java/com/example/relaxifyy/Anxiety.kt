@@ -4,10 +4,10 @@ object Anxiety {
 
 
 
-    fun getQuestions():ArrayList<anxiety>{
-        val questionList = ArrayList<anxiety>()
+    fun getQuestions():ArrayList<anxietyClass>{
+        val questionList = ArrayList<anxietyClass>()
 
-        val ques1 = anxiety(
+        val ques1 = anxietyClass(
             1,
             "Do you worry about lots of different things?",
             "Never",
@@ -17,7 +17,7 @@ object Anxiety {
         )
         questionList.add(ques1)
 
-        val ques2 = anxiety(
+        val ques2 = anxietyClass(
             2,
             "Do you have trouble controlling your worries?",
             "Never",
@@ -27,7 +27,7 @@ object Anxiety {
             )
         questionList.add(ques2)
 
-        val ques3 = anxiety(
+        val ques3 = anxietyClass(
             3,
             "Do you get irritable and/or easily annoyed when anxious?",
             "Never",
@@ -37,7 +37,7 @@ object Anxiety {
             )
         questionList.add(ques3)
 
-        val ques4 = anxiety(
+        val ques4 = anxietyClass(
             4,
             "Do you worry about lots of different things?",
             "Never",
@@ -47,7 +47,7 @@ object Anxiety {
             )
         questionList.add(ques4)
 
-        val ques5 = anxiety(
+        val ques5 = anxietyClass(
             5,
             "Does worry or anxiety make you feel fatigued or worn out?",
             "Never",
@@ -57,7 +57,7 @@ object Anxiety {
             )
         questionList.add(ques5)
 
-        val ques6 = anxiety(
+        val ques6 = anxietyClass(
             6,
             "Does worry or anxiety interfere with falling and/or staying asleep?",
             "Never",
@@ -67,7 +67,7 @@ object Anxiety {
             )
         questionList.add(ques6)
 
-        val ques7 = anxiety(
+        val ques7 = anxietyClass(
             7,
             "Does worry or anxiety make it hard to concentrate?",
             "Never",
@@ -77,7 +77,7 @@ object Anxiety {
             )
         questionList.add(ques7)
 
-        val ques8 = anxiety(
+        val ques8 = anxietyClass(
             8,
             "Do you feel jumpy?",
             "Never",
@@ -87,7 +87,7 @@ object Anxiety {
             )
         questionList.add(ques8)
 
-        val ques9 = anxiety(
+        val ques9 = anxietyClass(
             9,
             "Do you worry about how well you do things?",
             "Never",
@@ -97,7 +97,7 @@ object Anxiety {
             )
         questionList.add(ques9)
 
-        val ques10 = anxiety(
+        val ques10 = anxietyClass(
             10,
             "Do you worry about things working out in the future?",
             "Never",

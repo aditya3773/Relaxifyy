@@ -1,6 +1,6 @@
 package com.example.relaxifyy
 
-data class anxiety(
+data class anxietyClass(
     val id: Int,
     val question : String,
     val option1 : String,

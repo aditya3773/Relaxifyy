@@ -21,7 +21,7 @@ class BipolarActivity : AppCompatActivity() , View.OnClickListener{
         var selectedOption : Int? = null
         var questionList : ArrayList<Bipolar_Disorder_dc>? = null
         var currentPosition : Int =1
-        val buttonNext : Button = findViewById(R.id.buttonNext)
+        var buttonNext : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +31,13 @@ class BipolarActivity : AppCompatActivity() , View.OnClickListener{
         option2 = findViewById(R.id.option2)
         option3 = findViewById(R.id.option3)
         option4 = findViewById(R.id.option4)
+        buttonNext=findViewById(R.id.buttonNext)
 
         option1?.setOnClickListener(this)
         option2?.setOnClickListener(this)
         option3?.setOnClickListener(this)
         option4?.setOnClickListener(this)
+        buttonNext?.setOnClickListener(this)
 
 
 
@@ -52,13 +54,13 @@ class BipolarActivity : AppCompatActivity() , View.OnClickListener{
             option3?.text= particularQuestion.option3
             option4?.text= particularQuestion.option4
 
+            buttonNext?.text="SUBMIT"
         }
 
         fun selectedOptionView(tv:TextView,selectedOptionNo:Int){
 
             defaultOptionView()
             selectedOption = selectedOptionNo
-            tv.setTextColor(Color.parseColor("#7F9A8B"))
             tv.background= ContextCompat.getDrawable(this,R.drawable.selected_option)
         }
 
@@ -80,8 +82,6 @@ class BipolarActivity : AppCompatActivity() , View.OnClickListener{
             }
 
             for (option in options) {
-                option.setTextColor(Color.parseColor("#457B9D"))
-                option.typeface= Typeface.DEFAULT
                 option.background= ContextCompat.getDrawable(this, R.drawable.normaal_option)
             }
 

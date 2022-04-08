@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,10 @@
     android:orientation="vertical"
     android:padding="12dp"
     >
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,9 +31,11 @@
                 android:id="@+id/question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="wistel podu,chal be lodu"
+                android:text="Hello here is your question"
                 android:textSize="30dp"
+                android:elevation="48dp"
                 android:textColor="#587265"
+                android:fontFamily="sans-serif-condensed"
                 android:lineSpacingExtra="12dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
@@ -45,13 +50,15 @@
         android:id="@+id/option1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="option1"
-        android:textSize="30dp"
+        android:text="option 1"
+
         android:textColor="@color/black"
         android:layout_marginBottom="12dp"
         android:gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center"
+        android:fontFamily="@font/joyful_easter"
+        android:textSize="48dp"
         android:padding="4dp"
         />
 
@@ -60,7 +67,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option1"
-        android:textSize="30dp"
+        android:fontFamily="@font/joyful_easter"
+        android:textSize="48dp"
         android:textColor="@color/black"
         android:layout_marginBottom="12dp"
         android:gravity="center"
@@ -74,7 +82,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option1"
-        android:textSize="30dp"
+        android:fontFamily="@font/joyful_easter"
+        android:textSize="48dp"
         android:textColor="@color/black"
         android:layout_marginBottom="12dp"
         android:gravity="center"
@@ -88,13 +97,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option1"
-        android:textSize="30dp"
+        android:fontFamily="@font/joyful_easter"
+        android:textSize="48dp"
         android:textColor="@color/black"
         android:layout_marginBottom="12dp"
         android:gravity="center"
         android:layout_marginTop="24dp"
         android:layout_gravity="center"
-        android:background="@drawable/selected_option"
         android:padding="4dp"
         />
 
@@ -103,9 +112,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:textSize="25dp"
+        android:fontFamily="@font/home_btn"
+        android:textSize="48dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#7F9A8B"
 
         />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
