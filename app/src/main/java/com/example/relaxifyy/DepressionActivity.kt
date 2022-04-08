@@ -133,7 +133,7 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
 
 
                     val question = questionList?.get(currentPosition - 1)
-                    points+= selectedOption!!
+                    points+= (5- selectedOption!!)
                     if (currentPosition == 10) {
                         buttonNext?.text= "FINISH"
                     } else {

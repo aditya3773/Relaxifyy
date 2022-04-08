@@ -2,13 +2,12 @@ package com.example.relaxifyy
 
 
 
+import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.request.transition.ViewAnimationFactory
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -22,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     var RC_SIGN_IN=0
     lateinit var mGoogleSignInClient: GoogleSignInClient
+    var personName:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +33,13 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        val acct = GoogleSignIn.getLastSignedInAccount(this)
+        if (acct != null) {
+            personName = acct.displayName
+            personName = personName?.substringBefore(" ")
+        }
+
 
         btnSignId.setOnClickListener {
             signIn()
@@ -64,6 +71,7 @@ class MainActivity : AppCompatActivity() {
 
             // Signed in successfully, show authenticated UI.
             val intent = Intent(this,HomePageActivity::class.java)
+            intent.putExtra("username",personName)
             startActivity(intent)
             finish()
         } catch (e: ApiException) {

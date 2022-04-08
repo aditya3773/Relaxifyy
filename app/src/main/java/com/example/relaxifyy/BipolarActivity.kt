@@ -132,7 +132,7 @@ class BipolarActivity : AppCompatActivity() , View.OnClickListener{
 
 
                         val question = questionList?.get(currentPosition - 1)
-                        points+= selectedOption!!
+                        points+= (5- selectedOption!!)
                         if (currentPosition == questionList!!.size) {
                             buttonNext?.text= "FINISH"
                         } else {

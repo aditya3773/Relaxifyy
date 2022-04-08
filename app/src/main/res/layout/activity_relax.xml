@@ -21,7 +21,7 @@
         android:text="123"
         android:fontFamily="sans-serif-thin"
         android:padding="20dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="200dp"
         />
 

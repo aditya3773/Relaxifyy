@@ -2,8 +2,6 @@ package com.example.relaxifyy
 
 object Anxiety {
 
-
-
     fun getQuestions():ArrayList<anxietyClass>{
         val questionList = ArrayList<anxietyClass>()
 

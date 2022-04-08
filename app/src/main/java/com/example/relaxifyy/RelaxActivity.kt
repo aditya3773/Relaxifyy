@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.relaxifyy.R
 import java.text.DecimalFormat
 import java.text.NumberFormat
+import java.util.*
 
 class RelaxActivity : AppCompatActivity() {
 
@@ -30,7 +31,7 @@ class RelaxActivity : AppCompatActivity() {
         // countdown Interveal is 1sec = 1000 I have used
         // Time is in millisecond so 50sec = 50000 I have used
         // countdown Interveal is 1sec = 1000 I have used
-        object : CountDownTimer(30000, 1000) {
+        object : CountDownTimer(60000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
                 textView?.setText( "${millisUntilFinished / 1000} \n seconds ")
@@ -40,7 +41,7 @@ class RelaxActivity : AppCompatActivity() {
                 mediaPlayer?.stop()
                 val intent = Intent(this@RelaxActivity,HomePageActivity::class.java)
                 startActivity(intent)
-                Toast.makeText(this@RelaxActivity,"Congratulations on completing your relaxation therapy", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@RelaxActivity,"Congratulations on completing your relaxation therapy", Toast.LENGTH_LONG).show()
 
             }
         }.start()
@@ -77,6 +78,7 @@ class RelaxActivity : AppCompatActivity() {
 
     fun stopSong() {
         mediaPlayer?.stop()
+
         val intent = Intent(this@RelaxActivity,HomePageActivity::class.java)
         startActivity(intent)
         finish()

@@ -65,6 +65,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/tv_result_solution"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -74,7 +75,7 @@
             android:text="In order to be truly healthy, one must eat well, sleep on time and wake up early. Staying fit by exercising daily also helps to keep one's health in proper check. If you are in good health, you can always work to attain more wealth. But if one is not healthy, then wealth is of no importance."/>
 
         <Button
-            android:id="@+id/result_advice"
+            android:id="@+id/btn_result_solution"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

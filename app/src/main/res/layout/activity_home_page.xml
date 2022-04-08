@@ -51,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                 <TextView
+                    android:id="@+id/tv_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -59,14 +60,14 @@
                     android:text="Ekeshwar Aditya">
                 </TextView>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:fontFamily="sans-serif-condensed"
-                    android:textSize="32dp"
-                    android:text="Moodometer = 8">
-                </TextView>
+                    <TextView
+                        android:id="@+id/tv_mood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Moodometer = 8"
+                        android:textSize="32dp"></TextView>
 
                     <TextView
                         android:layout_width="match_parent"

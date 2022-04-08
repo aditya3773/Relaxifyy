@@ -114,14 +114,15 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
                     selectedOptionView(it,4)
                 }
             }
+
             R.id.buttonNext -> {
 
                 if(selectedOption==0){
                     currentPosition++
-                    when{currentPosition <= questionList!!.size -> {
+                    when{currentPosition <= 10 -> {
                         getQues()
                     }
-                        else -> {
+                        currentPosition==11 -> {
                             val intent = Intent(this,ResultActivity::class.java)
                             intent.putExtra("points",(points/4))
                             intent.putExtra("type","Anxiety Disorder \n Mood-O-Meter")
@@ -130,10 +131,7 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
                         }
                     }
                 }else {
-
-
-                    val question = questionList?.get(currentPosition - 1)
-                    points+= selectedOption!!
+                    points+= (5- selectedOption!!)
                     if (currentPosition == questionList!!.size) {
                         buttonNext?.text= "FINISH"
                     } else {
