@@ -13,8 +13,10 @@
         <entry key="app/src/main/res/drawable/selected_option.xml" value="0.1135" />
         <entry key="app/src/main/res/drawable/signbutton.xml" value="0.135650634765625" />
         <entry key="app/src/main/res/layout/activity_bipolar.xml" value="0.16796112060546875" />
+        <entry key="app/src/main/res/layout/activity_consult.xml" value="0.15729166666666666" />
         <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.25012207031249994" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.32140655517578137" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19949951171875002" />
+        <entry key="app/src/main/res/layout/activity_relax.xml" value="0.14322916666666666" />
       </map>
     </option>
   </component>

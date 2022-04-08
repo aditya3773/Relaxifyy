@@ -18,9 +18,15 @@ class HomePageActivity : AppCompatActivity()  {
             startActivity(intent)
         }
 
+        btnRelax.setOnClickListener{
+            val intent = Intent(this,RelaxActivity::class.java)
+            startActivity(intent)
+        }
+
         btnConsult.setOnClickListener{
             val intent = Intent(this,Consult::class.java)
             startActivity(intent)
         }
+
     }
 }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Relaxifyy">
         <activity
+            android:name=".RelaxActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomePageActivity"
             android:exported="false" />
         <activity
