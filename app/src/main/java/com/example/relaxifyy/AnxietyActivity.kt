@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 
 class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
 
+    var points:Int = 0
 
     var question : TextView? = null
     var option1 : TextView? = null
@@ -40,13 +41,15 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
         option3?.setOnClickListener(this)
         option4?.setOnClickListener(this)
         buttonNext?.setOnClickListener(this)
-
+        points=0
 
         questionList = Anxiety.getQuestions()
 
         getQues()
+
     }
     fun getQues(){
+        defaultOptionView()
         val particularQuestion: anxietyClass = questionList!!.get(currentPosition-1)
         question?.text= particularQuestion.question
         option1?.text= particularQuestion.option1
@@ -119,7 +122,9 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
                         getQues()
                     }
                         else -> {
-                            val intent = Intent(this,Result::class.java)
+                            val intent = Intent(this,ResultActivity::class.java)
+                            intent.putExtra("points",(points/4))
+                            intent.putExtra("type","Anxiety Disorder \n Mood-O-Meter")
                             startActivity(intent)
                             finish()
                         }
@@ -128,7 +133,7 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
 
 
                     val question = questionList?.get(currentPosition - 1)
-
+                    points+= selectedOption!!
                     if (currentPosition == questionList!!.size) {
                         buttonNext?.text= "FINISH"
                     } else {
@@ -137,6 +142,7 @@ class AnxietyActivity : AppCompatActivity() , View.OnClickListener{
 
                     selectedOption = 0
                 }
+
 
             }
         }

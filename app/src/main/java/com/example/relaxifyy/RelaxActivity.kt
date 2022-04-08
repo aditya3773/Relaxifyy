@@ -7,6 +7,7 @@ import android.os.CountDownTimer
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.relaxifyy.R
 import java.text.DecimalFormat
@@ -32,13 +33,14 @@ class RelaxActivity : AppCompatActivity() {
         object : CountDownTimer(30000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                textView?.setText( "${millisUntilFinished / 1000} sec")
+                textView?.setText( "${millisUntilFinished / 1000} \n seconds ")
             }
 
             override fun onFinish() {
                 mediaPlayer?.stop()
                 val intent = Intent(this@RelaxActivity,HomePageActivity::class.java)
                 startActivity(intent)
+                Toast.makeText(this@RelaxActivity,"Congratulations on completing your relaxation therapy", Toast.LENGTH_SHORT).show()
 
             }
         }.start()

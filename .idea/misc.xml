@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1135" />
         <entry key="app/src/main/res/drawable/call.xml" value="0.1135" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.148" />
         <entry key="app/src/main/res/drawable/dp.xml" value="0.1135" />
         <entry key="app/src/main/res/drawable/home_btn.xml" value="0.1135" />
         <entry key="app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.1135" />
@@ -14,9 +15,10 @@
         <entry key="app/src/main/res/drawable/signbutton.xml" value="0.135650634765625" />
         <entry key="app/src/main/res/layout/activity_bipolar.xml" value="0.16796112060546875" />
         <entry key="app/src/main/res/layout/activity_consult.xml" value="0.15729166666666666" />
-        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.25012207031249994" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.2966659545898437" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19949951171875002" />
-        <entry key="app/src/main/res/layout/activity_relax.xml" value="0.14322916666666666" />
+        <entry key="app/src/main/res/layout/activity_relax.xml" value="0.24058837890625" />
+        <entry key="app/src/main/res/layout/activity_result.xml" value="0.25269571940104163" />
       </map>
     </option>
   </component>

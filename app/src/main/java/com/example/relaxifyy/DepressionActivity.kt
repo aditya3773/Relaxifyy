@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 
 class DepressionActivity : AppCompatActivity() , View.OnClickListener{
 
+    var points:Int = 0
 
     var question : TextView? = null
     var option1 : TextView? = null
@@ -39,7 +40,7 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
         option4?.setOnClickListener(this)
         buttonNext?.setOnClickListener(this)
 
-
+        points=0
 
 
         questionList = Depression.getQuestions()
@@ -47,6 +48,7 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
         getQues()
     }
     fun getQues(){
+        defaultOptionView()
         val particularQuestion: depression_dc = questionList!!.get(currentPosition-1)
         question?.text= particularQuestion.question
         option1?.text= particularQuestion.option1
@@ -120,8 +122,9 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
                         getQues()
                     }
                         else -> {
-                            val intent = Intent(this,Result::class.java)
-
+                            val intent = Intent(this,ResultActivity::class.java)
+                            intent.putExtra("points",(points/4))
+                            intent.putExtra("type","Depression\n Mood-O-Meter")
                             startActivity(intent)
                             finish()
                         }
@@ -130,7 +133,7 @@ class DepressionActivity : AppCompatActivity() , View.OnClickListener{
 
 
                     val question = questionList?.get(currentPosition - 1)
-
+                    points+= selectedOption!!
                     if (currentPosition == 10) {
                         buttonNext?.text= "FINISH"
                     } else {
