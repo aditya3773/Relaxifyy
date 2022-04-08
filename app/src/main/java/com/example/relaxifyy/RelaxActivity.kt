@@ -31,10 +31,10 @@ class RelaxActivity : AppCompatActivity() {
         // countdown Interveal is 1sec = 1000 I have used
         // Time is in millisecond so 50sec = 50000 I have used
         // countdown Interveal is 1sec = 1000 I have used
-        object : CountDownTimer(60000, 1000) {
+        object : CountDownTimer(30000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                textView?.setText( "${millisUntilFinished / 1000} \n seconds ")
+                textView?.setText( "${millisUntilFinished / 1000} ")
             }
 
             override fun onFinish() {
@@ -82,5 +82,10 @@ class RelaxActivity : AppCompatActivity() {
         val intent = Intent(this@RelaxActivity,HomePageActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mediaPlayer?.stop()
     }
 }

@@ -20,7 +20,7 @@
             android:textAlignment="center"
             android:fontFamily="@font/joyful_easter"
             android:textSize="32dp"
-            android:text="'This is the place where we were going and nothing was foundas dss adsfa sfd'">
+            android:text="'A healthy mental state will help you leverage your Everyday Power to achieve the success you seek and live a purposeful life.'">
         </TextView>
 
         <androidx.cardview.widget.CardView
